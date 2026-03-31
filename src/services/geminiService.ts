@@ -4,7 +4,7 @@ import { NewsArticle, UserProfile, FilterScope } from "../types";
 // ------------------------------------------------------------------
 // Initialize with environment variable as required
 // ------------------------------------------------------------------
-const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
+const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY });
 
 export const fetchCuratedNews = async (
     profile: UserProfile, 
